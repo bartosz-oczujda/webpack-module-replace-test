@@ -16,4 +16,4 @@ console.log(testSubclass.getNum())
 console.log((testSubclass as TestReplacer).getStr())
 
 //chai.expect(test.getNum()).to.equal(55, "getNum returns proper value");
-chai.assert.equal(test.getNum(), 1, "getNum returns proper value")
+chai.assert.equal(test.getNum(), 55, "getNum returns proper value")
