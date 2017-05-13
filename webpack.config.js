@@ -1,5 +1,6 @@
 const webpack = require("webpack")
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
@@ -34,6 +35,7 @@ module.exports = {
         new webpack.NormalModuleReplacementPlugin(
             /Tester.ts/,
             '../src_repl/Tester_repl.ts'
-        )
+        ),
+        new HtmlWebpackPlugin({template: 'index.html'})
     ]
 };
