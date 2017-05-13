@@ -1,4 +1,5 @@
 const webpack = require("webpack")
+const path = require("path");
 
 module.exports = {
 
@@ -9,7 +10,12 @@ module.exports = {
 
     // Currently we need to add '.ts' to the resolve.extensions array. 
     resolve: {
-        extensions: ['.ts']
+        extensions: ['.ts', '.js']
+    },
+
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        port: 9000
     },
 
     // Source maps support ('inline-source-map' also works) 
