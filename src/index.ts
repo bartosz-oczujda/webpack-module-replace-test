@@ -1,5 +1,6 @@
 import { Tester } from "./Tester";
 import { TesterSubclass } from "./TesterSubclass";
+declare let chai;
 
 //Needed only for casting purposes if we add 
 //new fuctionality to the replaced class
@@ -13,3 +14,6 @@ console.log(test.getNum());
 let testSubclass = new TesterSubclass()
 console.log(testSubclass.getNum())
 console.log((testSubclass as TestReplacer).getStr())
+
+//chai.expect(test.getNum()).to.equal(55, "getNum returns proper value");
+chai.assert.equal(test.getNum(), 1, "getNum returns proper value")
