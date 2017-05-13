@@ -9,11 +9,8 @@ import { Tester as TestReplacer} from "../src_repl/Tester_repl"
 //I want to replace this class with TestReplacer
 //This is what NormalModuleReplacemntPlugin is doing in the webpack config
 let test = new Tester();
-console.log(test.getNum());
+let testSubclass = new TesterSubclass();
 
-let testSubclass = new TesterSubclass()
-console.log(testSubclass.getNum())
-console.log((testSubclass as TestReplacer).getStr())
-
-//chai.expect(test.getNum()).to.equal(55, "getNum returns proper value");
-chai.assert.equal(test.getNum(), 55, "getNum returns proper value")
+chai.assert.equal(test.getNum(), 55, "getNum returns proper value from replaced superclass");
+chai.assert.equal(testSubclass.getNum(), 33, "getNum returns proper value from subclass");
+chai.assert.equal((testSubclass as TestReplacer).getStr(), "Foo");
