@@ -1,8 +1,5 @@
 class TesterReplacer {
-    constructor() {
-        console.log("TesterReplacer")
-    }
-
+    
     getNum() {
         return 55
     }
