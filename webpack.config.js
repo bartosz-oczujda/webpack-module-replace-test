@@ -33,8 +33,8 @@ module.exports = {
     },
     plugins: [
         new webpack.NormalModuleReplacementPlugin(
-            /Tester.ts/,
-            '../src_repl/Tester_repl.ts'
+            /src\/Tester.ts/,
+            path.join(__dirname, '/src_repl/Tester_repl.ts')
         ),
         new HtmlWebpackPlugin({template: 'index.html'})
     ]
