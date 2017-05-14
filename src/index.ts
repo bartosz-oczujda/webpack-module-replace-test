@@ -13,4 +13,4 @@ let testSubclass = new TesterSubclass();
 
 chai.assert.equal(test.getNum(), 55, "getNum returns proper value from replaced superclass");
 chai.assert.equal(testSubclass.getNum(), 33, "getNum returns proper value from subclass");
-chai.assert.equal((testSubclass as TestReplacer).getStr(), "Foo");
+chai.assert.equal((testSubclass as TestReplacer).getStr(), "Foo", "it's possible to add and use new methods");
